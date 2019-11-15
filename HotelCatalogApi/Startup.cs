@@ -60,14 +60,14 @@ namespace HotelCatalogApi
             }
             app.UseCors();
             app.UseSwagger();
-            if (env.IsDevelopment())
-            {
+            //if (env.IsDevelopment())
+            //{
                 app.UseSwaggerUI(config =>
                 {
                     config.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog API");
                     config.RoutePrefix = "";
                 });
-            }
+            //}
             app.UseAuthentication();
             app.UseMvc();
         }
